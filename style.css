@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 400px;
+  }
+  
+  .circle-one{
+    position: absolute;
+    display: flex;
+    width: 30%;
+    height: 30%;
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0);
+    animation: move-one 6s linear infinite;
+  }
+  .circle-two {
+    position: absolute;
+    display: flex;
+    width: 30%;
+    height: 30%;
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0);
+    animation: move-two 6.4s linear infinite;
+  }
+  .circle-three {
+    position: absolute;
+    display: flex;
+    width: 30%;
+    height: 30%;
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0);
+    animation: move-three 6.8s linear infinite;
+  }
+  .circle-four {
+    position: absolute;
+    display: flex;
+    width: 30%;
+    height: 30%;
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0);
+    animation: move-four 7.2s linear infinite;
+  }
+
+  
+  .circle-center {
+   
+    position: absolute;
+    display: flex;
+    border-radius: 50%;
+    width: 30%;
+    height: 30%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 0, 0, 0.438);
+    z-index: 1;
+  }
+
+  p{
+    font-size: 150px;
+    z-index: 10;
+  }
+
+ 
+
+
+
+ 
+  @keyframes move-one {
+    0% {
+      transform: rotate(0deg) translateX(350px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateX(350px) rotate(-360deg);
+    }
+  }
+  @keyframes move-two {
+    0% {
+      transform: rotate(0deg) translateX(350px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateX(350px) rotate(-360deg);
+    }
+  }
+  @keyframes move-three {
+    0% {
+      transform: rotate(0deg) translateX(350px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateX(350px) rotate(-360deg);
+    }
+  }
+  @keyframes move-four {
+    0% {
+      transform: rotate(0deg) translateX(350px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateX(350px) rotate(-360deg);
+    }
+  }
+  .circle:hover{
+    height:50% ;
+    width:50% ;
+  }
+
+  .circle.active{
+
+    height:150vh;
+    width: 150vw;
+    z-index: 5;
+    background-color: rgba(176, 22, 223, 0.199);
+}
+
+/* .circle.active p{
+    display: flex;
+} */
+
+
+
+
+  
