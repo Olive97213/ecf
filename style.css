@@ -1,137 +1,210 @@
 * {
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 400px;
-    height: 400px;
-  }
-  
-  .circle-one{
-    position: absolute;
-    display: flex;
-    width: 30%;
-    height: 30%;
-    border-radius: 50%;
-    background-color: rgb(0, 0, 0);
-    animation: move-one 6s linear infinite;
-  }
-  .circle-two {
-    position: absolute;
-    display: flex;
-    width: 30%;
-    height: 30%;
-    border-radius: 50%;
-    background-color: rgb(0, 0, 0);
-    animation: move-two 6.4s linear infinite;
-  }
-  .circle-three {
-    position: absolute;
-    display: flex;
-    width: 30%;
-    height: 30%;
-    border-radius: 50%;
-    background-color: rgb(0, 0, 0);
-    animation: move-three 6.8s linear infinite;
-  }
-  .circle-four {
-    position: absolute;
-    display: flex;
-    width: 30%;
-    height: 30%;
-    border-radius: 50%;
-    background-color: rgb(0, 0, 0);
-    animation: move-four 7.2s linear infinite;
-  }
-
-  
-  .circle-center {
-   
-    position: absolute;
-    display: flex;
-    border-radius: 50%;
-    width: 30%;
-    height: 30%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(255, 0, 0, 0.438);
-    z-index: 1;
-  }
-
-  p{
-    font-size: 150px;
-    z-index: 10;
-  }
-
- 
-
-
-
- 
-  @keyframes move-one {
-    0% {
-      transform: rotate(0deg) translateX(350px) rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg) translateX(350px) rotate(-360deg);
-    }
-  }
-  @keyframes move-two {
-    0% {
-      transform: rotate(0deg) translateX(350px) rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg) translateX(350px) rotate(-360deg);
-    }
-  }
-  @keyframes move-three {
-    0% {
-      transform: rotate(0deg) translateX(350px) rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg) translateX(350px) rotate(-360deg);
-    }
-  }
-  @keyframes move-four {
-    0% {
-      transform: rotate(0deg) translateX(350px) rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg) translateX(350px) rotate(-360deg);
-    }
-  }
-  .circle:hover{
-    height:50% ;
-    width:50% ;
-  }
-
-  .circle.active{
-
-    height:150vh;
-    width: 150vw;
-    z-index: 5;
-    background-color: rgba(176, 22, 223, 0.199);
+  margin: 0;
+  padding: 0;
 }
 
-/* .circle.active p{
-    display: flex;
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: rgb(0,0,0);
+background: radial-gradient(circle, rgba(0,0,0,1) 17%, rgba(201,0,0,1) 66%, rgba(0,0,0,1) 70%); */
+  /* background: rgb(0,0,0);
+    background: radial-gradient(circle, rgba(0,0,0,1) 20%, rgba(201,0,0,1) 71%, rgba(0,0,0,1) 74%); */
+  /* background: rgb(0,0,0);
+background: radial-gradient(circle, rgba(0,0,0,1) 17%, rgba(201,0,0,1) 61%, rgba(0,0,0,1) 71%); */
+  background: rgb(0, 0, 0);
+  background: radial-gradient(circle, rgba(0, 0, 0, 1) 17%, rgba(255, 255, 255, 1) 66%, rgba(0, 0, 0, 1) 70%);
+  overflow: hidden;
+
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 400px;
+}
+
+.circle-one {
+  position: absolute;
+  display: flex;
+  width: 30%;
+  height: 30%;
+  border-radius: 50%;
+  background-color: rgb(0, 0, 0);
+  animation: move-one 6s linear infinite;
+}
+
+.circle-two {
+  position: absolute;
+  display: flex;
+  width: 30%;
+  height: 30%;
+  border-radius: 50%;
+  background-color: rgb(0, 0, 0);
+  animation: move-two 6.4s linear infinite;
+}
+
+.circle-three {
+  position: absolute;
+  display: flex;
+  width: 30%;
+  height: 30%;
+  border-radius: 50%;
+  background-color: rgb(0, 0, 0);
+  animation: move-three 6.8s linear infinite;
+}
+
+.circle-four {
+  position: absolute;
+  display: flex;
+  width: 30%;
+  height: 30%;
+  border-radius: 50%;
+  background-color: rgb(124, 108, 108);
+  animation: move-four 7.2s linear infinite;
+}
+
+
+.circle-center {
+
+  position: absolute;
+  display: flex;
+  border-radius: 50%;
+  width: 30%;
+  height: 30%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 0, 0, 0.438);
+  z-index: 1;
+}
+
+/* .test{
+  background-color: rgb(255, 255, 255);
+  height:90% ;
+  width:90% ;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ } */
+
+.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(255, 226, 226);
+  background: radial-gradient(circle, rgba(255, 226, 226, 1) 38%, rgba(187, 99, 228, 1) 61%);
+  /* border: solid */
+
+}
+
+p {
+  display: none;
+}
+
+
+
+
+
+
+
+@keyframes move-one {
+  0% {
+    transform: rotate(0deg) translateX(350px) rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg) translateX(350px) rotate(-360deg);
+  }
+}
+
+@keyframes move-two {
+  0% {
+    transform: rotate(0deg) translateX(350px) rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg) translateX(350px) rotate(-360deg);
+  }
+}
+
+@keyframes move-three {
+  0% {
+    transform: rotate(0deg) translateX(350px) rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg) translateX(350px) rotate(-360deg);
+  }
+}
+
+@keyframes move-four {
+  0% {
+    transform: rotate(0deg) translateX(350px) rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg) translateX(350px) rotate(-360deg);
+  }
+}
+
+.circle:hover {
+  height: 50%;
+  width: 50%;
+
+}
+
+.circle:hover p {
+  display: flex;
+}
+
+.circle.active {
+
+  height: 150vh;
+  width: 150vw;
+  z-index: 5;
+  background-color: rgb(3, 37, 184);
+
+}
+
+.circle.active p {
+  display: none;
+}
+
+/* .container-grid {
+  display: none;
 } */
 
+.circle.active .container-grid{
+  display: grid;
+  height: 70%;
+  width: 70%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    ". . . . "
+    ". abt . . "
+    ". abt . . "
+    ". . . . "
+  ;
+  background-color: rgb(240, 248, 255);
+}
 
+.about{
+  display: none;
+} 
 
-
-  
+.circle.active .about{
+    grid-area: abt;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    
+}
