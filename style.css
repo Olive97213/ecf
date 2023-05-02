@@ -1,3 +1,10 @@
+:root {
+  --error-color: #dc3545;
+  --success-color: #28a745;
+  --warning-color: #ffc107;
+}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -23,7 +30,7 @@ background: radial-gradient(circle, rgba(0,0,0,1) 17%, rgba(201,0,0,1) 61%, rgba
   background: rgb(93, 31, 31);
   background: radial-gradient(circle, rgba(0, 0, 0, 1) 17%, var(--gradient-color) 66%, rgba(0, 0, 0, 1) 70%);
   overflow: hidden;
- }
+}
 
 /* nav circle */
 
@@ -31,7 +38,7 @@ background: radial-gradient(circle, rgba(0,0,0,1) 17%, rgba(201,0,0,1) 61%, rgba
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr ;
+  grid-template-rows: 1fr 1fr 1fr;
   justify-items: center;
   align-items: center;
   grid-template-areas:
@@ -47,7 +54,7 @@ background: radial-gradient(circle, rgba(0,0,0,1) 17%, rgba(201,0,0,1) 61%, rgba
 .circle-one {
   background-color: rgb(0, 0, 0);
   grid-area: c1;
- /* animation: move-one 6s linear infinite; */
+  /* animation: move-one 6s linear infinite; */
 }
 
 .circle-two {
@@ -62,13 +69,13 @@ background: radial-gradient(circle, rgba(0,0,0,1) 17%, rgba(201,0,0,1) 61%, rgba
 }
 
 .circle-four {
- grid-area: c4;
+  grid-area: c4;
   /* animation: move-four 7.2s linear infinite; */
 }
 
 
 .circle-center {
-grid-area: cc;
+  grid-area: cc;
 }
 
 .circle {
@@ -120,7 +127,7 @@ grid-area: cc;
 
 /* build circle about */
 
-.circle.active .container-grid-one{
+.circle.active .container-grid-one {
   display: grid;
   height: 40%;
   width: 30%;
@@ -138,7 +145,7 @@ grid-area: cc;
 
 .description {
   display: none;
- 
+
 }
 
 .circle.active .description {
@@ -148,11 +155,11 @@ grid-area: cc;
   animation: fade-in 1s linear 0s forwards;
 }
 
-.maphoto{
+.maphoto {
   display: none;
 }
 
-.circle.active .maphoto{
+.circle.active .maphoto {
   grid-area: moi;
   width: 200%;
   animation: fade-in-two 1s linear 0s forwards;
@@ -164,16 +171,19 @@ grid-area: cc;
     opacity: 0;
     filter: blur(10px);
   }
+
   100% {
     opacity: 1;
     filter: blur(0);
   }
 }
+
 @keyframes fade-in-two {
   0% {
     opacity: 0;
     filter: blur(10px);
   }
+
   100% {
     opacity: 1;
     filter: blur(0);
@@ -183,10 +193,10 @@ grid-area: cc;
 /* build circle skills */
 .competences {
   display: none;
- 
+
 }
 
-.circle.active .container-grid-two{
+.circle.active .container-grid-two {
   display: grid;
   height: 60%;
   width: 90%;
@@ -217,6 +227,7 @@ grid-area: cc;
   animation: fade-in 1s linear 0s forwards;
   display: flex;
 }
+
 .circle.active .competence-two {
   grid-area: sk2;
   font-size: xx-large;
@@ -224,6 +235,7 @@ grid-area: cc;
   animation: fade-in 1s linear 0s forwards;
   display: flex;
 }
+
 .circle.active .competence-three {
   grid-area: sk3;
   font-size: xx-large;
@@ -231,6 +243,7 @@ grid-area: cc;
   animation: fade-in 1s linear 0s forwards;
   display: flex;
 }
+
 .circle.active .competence-four {
   grid-area: sk4;
   font-size: xx-large;
@@ -246,17 +259,17 @@ grid-area: cc;
   background: rgba(232, 141, 29, 0.523);
   height: 120%;
   width: 50%;
-  border-radius:1.5em;
+  border-radius: 1.5em;
 
 }
 
-a{
+a {
   height: 100%;
   width: 100%;
 }
 
 
- .circle.active .container-grid-three{
+.circle.active .container-grid-three {
   display: grid;
   height: 70%;
   width: 80%;
@@ -266,14 +279,14 @@ a{
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-areas:
     ". . . . . . . . "
-    ". . . . . . . . " 
+    ". . . . . . . . "
     ". . . . . . . . "
     ". pj1 pj1 pj2 pj2 . . . "
-    ". . . . . . . . " 
+    ". . . . . . . . "
     ". pj3 pj3 pj4 pj4 . . . "
     ". . . . . . . . "
-   ;
-   /* background-color: rgb(240, 248, 255); */
+  ;
+  /* background-color: rgb(240, 248, 255); */
 }
 
 .circle.active .project-one {
@@ -301,6 +314,7 @@ a{
   background-image: url(image/image2.jpg);
   background-size: cover;
 }
+
 .circle.active .project-three {
   grid-area: pj3;
   font-size: xx-large;
@@ -312,6 +326,7 @@ a{
   background-image: url(image/image3.jpg);
   background-size: cover;
 }
+
 .circle.active .project-four {
   grid-area: pj4;
   font-size: xx-large;
@@ -324,8 +339,135 @@ a{
   background-size: cover;
 }
 
+/* build contact circle */
+
+
+
+
+/* input{ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.5em;
+  margin: 2em;
+  
+} */
+
+.form-field {
+ 
+  margin-left: 5%;
+  margin-bottom: 4%;
+  
+}
+
+.form-field label {
+  display: block;
+  color: #777;
+ 
+  
+}
+
+.form-field input {
+  border: solid 2px #f0f0f0;
+  padding: 1.5%;
+  font-size: 40%;
+  display: block;
+  width: 90%;
+  border-radius: 1.5em;
+}
+
+.form-field textarea {
+  border-radius: 1.5em;
+}
+.form-field .button {
+  border-radius: 1.5em;
+  padding: 0.8em;
+  width: 20%;
+  margin-left: 36%;
+}
+
+
+
+
+.contact {
+  display: none;
+  background: rgb(226, 194, 194);
+  border-radius: 1.5em;
+
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.form-field input:focus, .form-field select:focus {
+  outline: none;
+}
+
+.form-field.error input {
+  border-color: var(--error-color);
+}
+.form-field.error select {
+border : 2px solid var(--error-color);
+}
+
+.form-field.success input {
+  border-color: var(--success-color);
+}
+.form-field.success select {
+border : 2px solid var(--success-color);
+}
+
+
+.form-field small {
+  color: var(--error-color);
+}
+
+
+
+.circle.active .container-grid-four {
+  display: grid;
+  height: 70%;
+  width: 80%;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    ". . . . . . . . "
+    ". . . ctc . . . . "
+    ". . . ctc . mps . . "
+    ". . . . . . . . "
+    ". . . . . . . . "
+    ". . . . . . . . "
+    ". . . . . . . . "
+  ;
+  /* background-color: rgb(240, 248, 255); */
+}
+
+.circle.active .contact {
+  grid-area: ctc;
+  height: 150%;
+  width: 150%;
+  font-size:30px;
+  animation: fade-in 1s linear 0s forwards;
+  display: block;
+  margin: auto;
  
 
+}
 
+#maps{
+  display: none;
+}
 
+.circle.active #maps {
+  grid-area: mps;
+  height: 150%;
+  width: 150%;
+  border-radius: 1.5em;
+  font-size:30px;
+  display: flex;
+  animation: fade-in 1s linear 0s forwards;
+}
 
