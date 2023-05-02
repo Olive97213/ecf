@@ -91,7 +91,7 @@ circles.forEach(circle => {
     const maPhoto = circle.querySelector(".maphoto");
     if (circle.classList.contains('active')) {
       setTimeout(() => {
-      maPhoto.style.display = 'block';
+        maPhoto.style.display = 'block';
       }, 1000);
     } else {
       maPhoto.style.display = 'none';
@@ -121,7 +121,7 @@ projects.forEach(project => {
     const circle = project.parentElement.parentElement; // Accéder à l'élément cercle parent
     if (circle.classList.contains('active')) {
       circle.classList.remove('active');
-      
+
     }
   });
 });
@@ -214,28 +214,42 @@ form.addEventListener("submit", function (e) {
     isFirstnameValid &&
     isEmailValid;
 
-  let ebody =
-  <b>Nom: </b>${nameEl.value}&nbsp;$(firstnameEl.value)
-  <br>
-  <b>Email: </b>${emailEl.value}
-  <br> 
-  <b>Message: </b>${textArea.value}
-  <br>
+  let ebody = `
+    <h3>First Name: </h3>${firstnameEl.value}
+    <br>
+    <h3>Last Name: </h3>${nameEl.value}
+    <br>
+    <h3>Email: </h3>${emailEl.value}
+    <br>
+    <h3>Message: </h3>${textArea.value}
+  `;
+
+  // let ebody=
+
+  // <b>Nom: </b>${nameEl.value}&nbsp;$(firstnameEl.value)
+  // <br>
+  // <b>Email: </b>${emailEl.value}
+  // <br> 
+  // <b>Message: </b>${textArea.value}
+  // <br>
+
+
+
 
 
 
   if (isFormValid) {
     Email.send({
-      Host : "smtp.elasticemail.com",
-      Username : "colivier972@hotmail.fr",
-      Password : "D5EA4C547E110307F8922C85AEF39FDB710A",
-      To : 'colivier972@hotmail.fr',
-      From : "colivier972@hotmail.fr",
-      Subject : "This is the subject",
-      Body : ebody
-  }).then(
-    message => alert(message)
-  );
+      Host: "smtp.elasticemail.com",
+      Username: "colivier972@hotmail.fr",
+      Password: "D5EA4C547E110307F8922C85AEF39FDB710A",
+      To: 'colivier972@hotmail.fr',
+      From: "colivier972@hotmail.fr",
+      Subject: "This is the subject",
+      Body: ebody
+    }).then(
+      message => alert(message)
+    );
   }
 });
 
@@ -268,23 +282,50 @@ form.addEventListener(
   })
 );
 
-
-// submit.addEventListener("submit",(e)=>{
-//   e.preventDefault();
-//   console.log("clicked");
-// })
-
-
-
-// Email.send({
-//   SecureToken : "5a3ecc3a-b50c-4476-be5c-92f1db0ff3e7",
-//   To : 'colivier972@hotmail.fr',
-//   From : "colivier972@hotmail.fr",
-//   Subject : "Test",
-//   Body : "And this is the body"
-// }).then(
-// message => alert(message)
-// );
+// API meteo
+let ville = 'Marseille';
+// Afficher à l'entrée de la page une température d'une ville par défaut, ici Marseille
+// Pour ca on appelle la fonction recevoirTemperature();
+recevoirTemperature(ville);
+function recevoirTemperature(ville) {
+    let appid = '5dd4a3cfb9e347e4e1b4e7fd61fe21dd';
+    const url = 'https://api.openweathermap.org/data/2.5/weather?q=' + ville + '&appid=' + appid + '&lang=fr&units=metric';
+    let requete = new XMLHttpRequest();
+    requete.open('GET', url);
+    requete.responseType = 'json';
+    requete.send();
+    requete.onload = function () {
+        console.log(requete);
+        if (requete.readyState == XMLHttpRequest.DONE) {
+            if (requete.status === 200) {
+                let temp = requete.response.main.temp;
+                let ville = requete.response.name;
+                let icone = requete.response.weather[0].icon;
+                let min = requete.response.main.temp_min;
+                let max = requete.response.main.temp_max;
+                let newDiv = document.createElement('div');
+                newDiv.innerHTML = '<p>Min : <span class="text-primary font-weight-bold">' + min + '°C</span>' + '</p> <p>Max : <span class="text-danger font-weight-bold"> ' + max + '°C</span></p>';
+                let img = document.createElement('img');
+                img.src = 'https://openweathermap.org/img/wn/' + icone + '@2x.png';
+                let selectVille = document.querySelector('#ville')
+                selectVille.innerHTML = '<h2>' + ville + '</h2>';
+                selectVille.append(img);
+                selectVille.append(newDiv);
+                let selectTemp = document.querySelector('#temperature_label')
+                selectTemp.textContent = temp;
+            }
+            else {
+                alert('Un problème est intervenu, merci de ressaisir une nouvelle ville ou revenir plus tard.');
+            }
+        }
+    }
+}
+let bouton = document.querySelector('#changer');
+bouton.addEventListener('click', () => {
+    let villeChoisie = ville;
+    villeChoisie = prompt('Quelle ville souhaitez-vous choisir ?');
+    recevoirTemperature(villeChoisie);
+})
 
 
 
