@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/06df46a9d4.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 
@@ -13,7 +14,8 @@
 
     <div class="container">
         <div class="circle-center circle">
-            <p class="title">ABOUT</p>
+            <!-- <p class="title">ABOUT</p> -->
+            <div class="title"><i class="fa-solid fa-user fa-bounce"></i></div>
             <div class="container-grid-one">
                 <p class="description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.
                     Suspendisse lectus tortor,
@@ -25,16 +27,18 @@
             </div>
         </div>
         <div class="circle-one circle">
-            <p class="title">SKILLS</p>
+            <!-- <p class="title">SKILLS</p> -->
+            <div class="title"><i class="fa-solid fa-graduation-cap fa-bounce"></i></div>
             <div class="container-grid-two">
-                <p class="competence-one competences">competence 1</p>
-                <p class="competence-two competences">competence 2</p>
-                <p class="competence-three competences">competence 3</p>
-                <p class="competence-four competences">competence 4</p>
+                <ion-icon class="competence-one competences" name="logo-html5"></ion-icon>
+                <ion-icon class="competence-two competences" name="logo-css3"></ion-icon>
+                <ion-icon class="competence-three competences" name="logo-javascript"></ion-icon>
+                <ion-icon class="competence-four competences" name="logo-wordpress"></ion-icon>
             </div>
         </div>
         <div class="circle-two circle">
-            <p class="title">PROJECTS</p>
+            <!-- <p class="title">PROJECTS</p> -->
+            <div class="title"><i class="fa-solid fa-folder-open fa-bounce"></i></div>
             <div class="container-grid-three">
                 <div class="project-one project">
                     <a href="#"></a>
@@ -51,7 +55,8 @@
             </div>
         </div>
         <div class="circle-three circle">
-            <p class="title">CONTACT</p>
+            <!-- <p class="title">CONTACT</p> -->
+            <div class="title"><i class="fa-solid fa-address-card fa-bounce"></i></div>
             <div class="container-grid-four">
                 <form class="contact" name='formValidate'>
                     <div class="form-field">
@@ -89,32 +94,37 @@
 
         </div>
 
+        <!-- build circle API meteo -->
+
         <div class="circle-four circle">
-            <p>METEO</p>
+            <!-- <p>METEO</p> -->
             <!-- Ville / Temperature -->
-      <div class="text-center">
-        <div id="ville">Marseille</div>
+            <div class="title"><i class="fa-solid fa-sun fa-bounce"></i></div>
+            <div class="text-center">
+                <div id="ville">Marseille</div>
+                <!-- <i class="fa-solid fa-sun fa-beat"></i> -->
+                <div id="temperature">
+                    <span id="temperature_label">
+                        xx.x
+                    </span> °C
+                </div>
+                <div id="changer">
+                    Changer de ville
+                </div>
 
-        <div id="temperature">
-          <span id="temperature_label">
-            xx.x
-          </span> °C
+            </div>
+
+            <!-- Changer de ville -->
+
+
         </div>
-        <div id="changer">
-          Changer de ville
-        </div>
-
-      </div>
-
-      <!-- Changer de ville -->
-
-
     </div>
-        </div>
 
-        <script src="main.js"></script>
-        <script src="maintwo.js"></script>
-        <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="main.js"></script>
+    <script src="maintwo.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 </body>
 

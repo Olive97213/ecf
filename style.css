@@ -95,6 +95,10 @@ background: radial-gradient(circle, rgba(0,0,0,1) 17%, rgba(201,0,0,1) 61%, rgba
 
 .title {
   display: none;
+  }
+
+.fa-solid {
+ font-size:50px;
 }
 
 
@@ -193,7 +197,6 @@ background: radial-gradient(circle, rgba(0,0,0,1) 17%, rgba(201,0,0,1) 61%, rgba
 /* build circle skills */
 .competences {
   display: none;
-
 }
 
 .circle.active .container-grid-two {
@@ -470,4 +473,66 @@ border : 2px solid var(--success-color);
   display: flex;
   animation: fade-in 1s linear 0s forwards;
 }
+
+/* build circle API meteo */
+
+.text-center{
+  display:none;
+}
+
+#ville{
+  
+  font-size: 100%;
+}
+
+#changer{
+  display: none;
+}
+
+.circle-four p{
+  display: none;
+}
+
+#temperature{
+  display: none;
+  
+}
+
+/* .circle:hover .text-center {
+  display: block;
+} */
+
+/* .circle:hover #temperature {
+   display: block;
+   margin-left: 1.6em;
+} */
+
+.circle-four.active {
+
+  height: 30vh;
+  width: 20vw;
+  z-index: -1;
+  background-color: rgb(14, 53, 226);
+
+}
+
+.circle-four.active .text-center {
+  text-align: center;
+  display: block;
+ }
+
+.circle-four.active #temperature {
+  display: block;
+  margin-top:0.5em;
+}
+.circle-four.active p {
+  display: block;
+  margin-top:0.5em;
+}
+.circle-four.active #changer {
+  display: block;
+  margin-top:0.5em;
+}
+
+
 
