@@ -70,9 +70,9 @@ function updateGradientColor() {
   bodyElement.style.setProperty("--gradient-color", gradientColor);
 }
 
-// Mettre à jour la couleur toutes les 3 secondes (3000 millisecondes)
-setInterval(updateGradientColor, 3000);
 
+setInterval(updateGradientColor, 3000);
+// Mettre à jour la couleur toutes les 3 secondes (3000 millisecondes)
 
 const circles = document.querySelectorAll('.circle-one, .circle-two, .circle-three, .circle-four, .circle-center');
 

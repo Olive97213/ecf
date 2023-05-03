@@ -8,6 +8,7 @@
 * {
   margin: 0;
   padding: 0;
+  text-decoration: none;
 }
 
 #myBody {
@@ -15,6 +16,7 @@
   width: 100vw;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
   /* background: rgb(0,0,0);
 background: radial-gradient(circle, rgba(0,0,0,1) 17%, rgba(201,0,0,1) 66%, rgba(0,0,0,1) 70%); */
@@ -29,8 +31,10 @@ background: radial-gradient(circle, rgba(0,0,0,1) 17%, rgba(201,0,0,1) 61%, rgba
   transition: background-color 2s ease; */
   background: rgb(93, 31, 31);
   background: radial-gradient(circle, rgba(0, 0, 0, 1) 17%, var(--gradient-color) 66%, rgba(0, 0, 0, 1) 70%);
+  /* background-image: url(image/vieux\ papier-1.jpg); */
   overflow: hidden;
 }
+
 
 /* nav circle */
 
@@ -48,7 +52,9 @@ background: radial-gradient(circle, rgba(0,0,0,1) 17%, rgba(201,0,0,1) 61%, rgba
   ;
   width: 60vw;
   height: 80vh;
+  margin-top:6em;
   z-index: 1;
+  
 }
 
 .circle-one {
@@ -86,9 +92,14 @@ background: radial-gradient(circle, rgba(0,0,0,1) 17%, rgba(201,0,0,1) 61%, rgba
   border-radius: 50%;
   align-items: center;
   justify-content: center;
-  background: rgb(15, 18, 201);
-  background: radial-gradient(circle, rgba(255, 226, 226, 1) 38%, rgb(221, 7, 7) 61%);
+  background-image: url(image/vieux\ papier-1.jpg);
+  background-color: aqua;
+  background-size: cover;
   z-index: -2;
+  box-shadow: 1px 1px 12px 10px rgba(0,0,0,0.7) inset;
+-webkit-box-shadow: 1px 1px 12px 10px rgba(0,0,0,0.7) inset;
+-moz-box-shadow: 1px 1px 12px 10px rgba(0,0,0,0.7) inset;
+
   /* border: solid */
 
 }
@@ -118,6 +129,9 @@ background: radial-gradient(circle, rgba(0,0,0,1) 17%, rgba(201,0,0,1) 61%, rgba
   width: 210vw;
   z-index: -1;
   background-color: rgb(14, 53, 226);
+  box-shadow: 1px 1px 12px 10px rgba(0,0,0,0.7) inset;
+-webkit-box-shadow: 1px 1px 12px 10px rgba(0,0,0,0.7) inset;
+-moz-box-shadow: 1px 1px 12px 10px rgba(0,0,0,0.7) inset;
 
 }
 
@@ -229,6 +243,7 @@ background: radial-gradient(circle, rgba(0,0,0,1) 17%, rgba(201,0,0,1) 61%, rgba
   text-align: center;
   animation: fade-in 1s linear 0s forwards;
   display: flex;
+  color: #f47a17;
 }
 
 .circle.active .competence-two {
@@ -237,6 +252,7 @@ background: radial-gradient(circle, rgba(0,0,0,1) 17%, rgba(201,0,0,1) 61%, rgba
   text-align: center;
   animation: fade-in 1s linear 0s forwards;
   display: flex;
+  color: rgb(31, 77, 232);
 }
 
 .circle.active .competence-three {
@@ -245,6 +261,7 @@ background: radial-gradient(circle, rgba(0,0,0,1) 17%, rgba(201,0,0,1) 61%, rgba
   text-align: center;
   animation: fade-in 1s linear 0s forwards;
   display: flex;
+  color: #ffc107;
 }
 
 .circle.active .competence-four {
@@ -253,6 +270,7 @@ background: radial-gradient(circle, rgba(0,0,0,1) 17%, rgba(201,0,0,1) 61%, rgba
   text-align: center;
   animation: fade-in 1s linear 0s forwards;
   display: flex;
+  color: rgb(47, 177, 243);
 }
 
 /* build circle projects */
@@ -535,4 +553,101 @@ border : 2px solid var(--success-color);
 }
 
 
+/* build footer */
 
+.foot-container{
+  display: grid;
+  width: 100vw;
+  height: 13%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  align-items: center;
+  grid-template-areas:
+    " lkd gth wha cv "
+   
+  ;
+  
+  margin-top: auto;
+  z-index: 10;
+  
+}
+
+.reseaux{
+  
+  font-size: 50px;
+  /* animation: floating 3s ease-in-out infinite; */
+}
+
+
+
+.linkedin{
+  grid-area: lkd;
+  animation: floating-1 3s ease-in-out infinite;
+  animation-delay: 0s;
+}
+.github{
+  grid-area: gth;
+  animation: floating-2 3s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+.whatsapp{
+  grid-area: wha;
+  animation: floating-3 3s ease-in-out infinite;
+  animation-delay: 1s;
+}
+.cv{
+  grid-area: cv;
+  animation: floating-4 3s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
+
+@keyframes floating-1 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes floating-2 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes floating-3 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes floating-4 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.reseaux:hover {
+  animation-play-state: paused;
+}
