@@ -96,9 +96,8 @@ background: radial-gradient(circle, rgba(0,0,0,1) 17%, rgba(201,0,0,1) 61%, rgba
   background-color: aqua;
   background-size: cover;
   z-index: -2;
-  box-shadow: 1px 1px 12px 10px rgba(0,0,0,0.7) inset;
--webkit-box-shadow: 1px 1px 12px 10px rgba(0,0,0,0.7) inset;
--moz-box-shadow: 1px 1px 12px 10px rgba(0,0,0,0.7) inset;
+  background: rgb(15, 18, 201);
+  background: radial-gradient(circle, rgba(255, 226, 226, 1) 38%, rgb(221, 7, 7) 61%);
 
   /* border: solid */
 
