@@ -29,10 +29,13 @@ background: radial-gradient(circle, rgba(0,0,0,1) 17%, rgba(201,0,0,1) 61%, rgba
   /* background: rgb(93, 31, 31);
   background: radial-gradient(circle, rgba(0, 0, 0, 1) 17%, var(--gradient-color) 66%, rgba(0, 0, 0, 1) 70%);
   transition: background-color 2s ease; */
-  background: rgb(93, 31, 31);
-  background: radial-gradient(circle, rgba(0, 0, 0, 1) 17%, var(--gradient-color) 66%, rgba(0, 0, 0, 1) 70%);
+  /* background: rgb(93, 31, 31);
+  background: radial-gradient(circle, rgba(0, 0, 0, 1) 17%, var(--gradient-color) 66%, rgba(0, 0, 0, 1) 70%); */
   /* background-image: url(image/vieux\ papier-1.jpg); */
+  background: rgb(179,99,228);
+  background: linear-gradient(211deg, rgba(179,99,228,1) 50%, rgba(255,249,249,1) 50%);
   overflow: hidden;
+  
 }
 
 
@@ -58,19 +61,23 @@ background: radial-gradient(circle, rgba(0,0,0,1) 17%, rgba(201,0,0,1) 61%, rgba
 }
 
 .circle-one {
-  background-color: rgb(0, 0, 0);
+  
   grid-area: c1;
+  
+
   /* animation: move-one 6s linear infinite; */
 }
 
 .circle-two {
-  background-color: rgb(0, 0, 0);
+  
   grid-area: c2;
+  background-color: #fff9f9;
   /* animation: move-two 6.4s linear infinite; */
 }
 
 .circle-three {
   grid-area: c3;
+  
   /* animation: move-three 6.8s linear infinite; */
 }
 
@@ -84,6 +91,11 @@ background: radial-gradient(circle, rgba(0,0,0,1) 17%, rgba(201,0,0,1) 61%, rgba
   grid-area: cc;
 }
 
+/* .circle-center.circle.active{
+  background: rgb(179,99,228);
+  background: linear-gradient(211deg, rgba(179,99,228,1) 50%, rgba(255,249,249,1) 52%);
+} */
+
 .circle {
   display: flex;
   position: absolute;
@@ -92,12 +104,26 @@ background: radial-gradient(circle, rgba(0,0,0,1) 17%, rgba(201,0,0,1) 61%, rgba
   border-radius: 50%;
   align-items: center;
   justify-content: center;
-  background-image: url(image/vieux\ papier-1.jpg);
-  background-color: aqua;
+  /* background-color:#fff9f9; */
   background-size: cover;
   z-index: -2;
-  background: rgb(15, 18, 201);
-  background: radial-gradient(circle, rgba(255, 226, 226, 1) 38%, rgb(221, 7, 7) 61%);
+  box-shadow: 0px 4px 5px 5px rgba(0,0,0,0.75);
+-webkit-box-shadow: 0px 4px 5px 5px rgba(0,0,0,0.75) inset;
+-moz-box-shadow: 0px 4px 5px 5px rgba(0,0,0,0.75) inset;
+  /* box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75)inset;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75)inset;
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75)inset; */
+  /* background: rgb(179,99,228); */
+  /* background: linear-gradient(210deg, rgba(179,99,228,1) 51%, rgba(255,249,249,1) 51%);
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75) inset;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75) inset;
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75) inset;
+   background: rgb(255,249,249);
+background: linear-gradient(31deg, rgba(255,249,249,1) 50%, rgba(179,99,228,1) 50%);
+   */
+  /* background: rgb(15, 18, 201);
+  background: radial-gradient(circle, rgba(255, 226, 226, 1) 38%, rgb(221, 7, 7) 61%); */
+  
 
   /* border: solid */
 
@@ -115,8 +141,24 @@ background: radial-gradient(circle, rgba(0,0,0,1) 17%, rgba(201,0,0,1) 61%, rgba
 .circle:hover {
   height: 70%;
   width: 60%;
+  box-shadow: none;
+  /* box-shadow: -8px -8px 5px 0px rgba(0,0,0,0.75) inset;
+-webkit-box-shadow: -8px -8px 5px 0px rgba(0,0,0,0.75) inset;
+-moz-box-shadow: -8px -8px 5px 0px rgba(0,0,0,0.75) inset; */
+/* box-shadow: 10px 5px 7px 3px rgba(0,0,0,0.85);
+-webkit-box-shadow: 10px 5px 7px 3px rgba(0,0,0,0.85);
+-moz-box-shadow: 10px 5px 7px 3px rgba(0,0,0,0.85); */
+/* box-shadow: 0px 1px 10px 7px rgba(0,0,0,0.85) inset;
+-webkit-box-shadow: 0px 1px 10px 7px rgba(0,0,0,0.85) inset;
+-moz-box-shadow: 0px 1px 10px 7px rgba(0,0,0,0.85) inset; */
 
 }
+
+/* .circle-center{
+  box-shadow: -9px -6px 3px -2px rgba(0,0,0,0.75) inset;
+  -webkit-box-shadow: -9px -6px 3px -2px rgba(0,0,0,0.75) inset;
+  -moz-box-shadow: -9px -6px 3px -2px rgba(0,0,0,0.75) inset;
+} */
 
 .circle:hover .title {
   display: flex;
@@ -127,12 +169,15 @@ background: radial-gradient(circle, rgba(0,0,0,1) 17%, rgba(201,0,0,1) 61%, rgba
   height: 210vh;
   width: 210vw;
   z-index: -1;
-  background-color: rgb(14, 53, 226);
-  box-shadow: 1px 1px 12px 10px rgba(0,0,0,0.7) inset;
--webkit-box-shadow: 1px 1px 12px 10px rgba(0,0,0,0.7) inset;
--moz-box-shadow: 1px 1px 12px 10px rgba(0,0,0,0.7) inset;
+  background-color: #fff9f9;
+  background: rgb(179,99,228);
+  background: linear-gradient(211deg, rgba(179,99,228,1) 50%, rgba(255,249,249,1) 50%);
+  box-shadow: 1px -2px 9px 5px rgba(0,0,0,0.95) inset;
+  -webkit-box-shadow: 1px -2px 9px 5px rgba(0,0,0,0.95) inset;
+  -moz-box-shadow: 1px -2px 9px 5px rgba(0,0,0,0.95) inset;
 
 }
+
 
 .circle.active .title {
   display: none;
@@ -142,7 +187,7 @@ background: radial-gradient(circle, rgba(0,0,0,1) 17%, rgba(201,0,0,1) 61%, rgba
   display: none;
 }
 
-/* build circle about */
+/* build circle center about */
 
 .circle.active .container-grid-one {
   display: grid;
@@ -207,9 +252,11 @@ background: radial-gradient(circle, rgba(0,0,0,1) 17%, rgba(201,0,0,1) 61%, rgba
   }
 }
 
-/* build circle skills */
+/* build circle one skills */
 .competences {
   display: none;
+  font-size: 7em;
+
 }
 
 .circle.active .container-grid-two {
@@ -224,21 +271,32 @@ background: radial-gradient(circle, rgba(0,0,0,1) 17%, rgba(201,0,0,1) 61%, rgba
     ". . . . . . . ."
     ". . . . . . . ."
     ". . . . . . . ."
-    ". . sk1 sk1 . . . ."
-    ". . sk1 sk1 . . . ."
-    ". . . sk2 sk2 . . ."
-    ". . . sk2 sk2 . . ."
-    ". . . . sk3 sk3 . ."
-    ". . . . sk3 sk3 . ."
-    ". . . . . sk4 sk4 ."
-    ". . . . . sk4 sk4 ."
+    ". . . . . . . ."
+    ". . . . . . . ."
+    ". . . sk1 sk2 sk3 sk4 ."
+    ". . . . . . . ."
+    ". . . . . . . ."
+    ". . . sk5 sk6 sk7 sk8 ."
+    ". . . . . . . ."
+    ". . . . sk9 sk9 . ."
   ;
   /* background-color: rgb(240, 248, 255); */
 }
 
+/* .circle-one{
+  box-shadow: 8px -6px 3px -2px rgba(0,0,0,0.75) inset;
+-webkit-box-shadow: 8px -6px 3px -2px rgba(0,0,0,0.75) inset;
+-moz-box-shadow: 8px -6px 3px -2px rgba(0,0,0,0.75) inset;
+} */
+
+/* .circle-one.active{
+  background: rgb(179,99,228);
+  background: linear-gradient(211deg, rgba(179,99,228,1) 47%, rgba(255,249,249,1) 51%);
+} */
+
 .circle.active .competence-one {
   grid-area: sk1;
-  font-size: xx-large;
+  /* font-size: 10em; */
   text-align: center;
   animation: fade-in 1s linear 0s forwards;
   display: flex;
@@ -247,7 +305,7 @@ background: radial-gradient(circle, rgba(0,0,0,1) 17%, rgba(201,0,0,1) 61%, rgba
 
 .circle.active .competence-two {
   grid-area: sk2;
-  font-size: xx-large;
+  /* font-size: xx-large; */
   text-align: center;
   animation: fade-in 1s linear 0s forwards;
   display: flex;
@@ -256,7 +314,7 @@ background: radial-gradient(circle, rgba(0,0,0,1) 17%, rgba(201,0,0,1) 61%, rgba
 
 .circle.active .competence-three {
   grid-area: sk3;
-  font-size: xx-large;
+  /* font-size: xx-large; */
   text-align: center;
   animation: fade-in 1s linear 0s forwards;
   display: flex;
@@ -265,14 +323,73 @@ background: radial-gradient(circle, rgba(0,0,0,1) 17%, rgba(201,0,0,1) 61%, rgba
 
 .circle.active .competence-four {
   grid-area: sk4;
-  font-size: xx-large;
+  /* font-size: xx-large; */
   text-align: center;
   animation: fade-in 1s linear 0s forwards;
   display: flex;
   color: rgb(47, 177, 243);
 }
+.circle.active .competence-five {
+  grid-area: sk5;
+  /* font-size: xx-large; */
+  text-align: center;
+  animation: fade-in 1s linear 0s forwards;
+  display: flex;
+ 
+}
+.circle.active .competence-six {
+  grid-area: sk6;
+  /* font-size: xx-large; */
+  text-align: center;
+  animation: fade-in 1s linear 0s forwards;
+  display: flex;
+ 
+}
+.circle.active .competence-seven {
+  grid-area: sk7;
+  /* font-size: xx-large; */
+  text-align: center;
+  animation: fade-in 1s linear 0s forwards;
+  display: flex;
+ 
+}
+.circle.active .competence-eight {
+  grid-area: sk8;
+  /* font-size: xx-large; */
+  text-align: center;
+  animation: fade-in 1s linear 0s forwards;
+  display: flex;
+ 
+}
+.circle.active .competence-nine {
+  grid-area: sk9;
+  /* font-size: xx-large; */
+  text-align: center;
+  animation: fade-in 1s linear 0s forwards;
+  display: flex;
+ 
+}
 
-/* build circle projects */
+.logo-figma{
+  height: 90%;
+  width: 80%;
+}
+.logo-bootstrap{
+  height: 50%;
+  width: 30%;
+}
+.logo-php{
+  height: 100%;
+  width: 40%;
+}
+.logo-sql{
+  height: 90%;
+  width: 20%;
+}
+
+
+
+/* build circle two projects */
 
 .project {
   display: none;
@@ -321,6 +438,12 @@ a {
   background-size: cover;
 }
 
+/* .circle-two.active{
+  background: rgb(179,99,228);
+  background: linear-gradient(211deg, rgba(179,99,228,1) 60%, rgba(255,249,249,1) 62%);
+
+} */
+
 
 
 .circle.active .project-two {
@@ -359,7 +482,7 @@ a {
   background-size: cover;
 }
 
-/* build contact circle */
+/* build circle three contact  */
 
 
 
@@ -411,9 +534,9 @@ a {
 
 .contact {
   display: none;
-  background: rgb(226, 194, 194);
+  background: #ec7e3da8;
   border-radius: 1.5em;
-
+ 
 }
 
 .button:hover {
@@ -456,7 +579,7 @@ border : 2px solid var(--success-color);
   grid-template-areas:
     ". . . . . . . . "
     ". . . ctc . . . . "
-    ". . . ctc . mps . . "
+    ". . . ctc . . mps . "
     ". . . . . . . . "
     ". . . . . . . . "
     ". . . . . . . . "
@@ -464,6 +587,17 @@ border : 2px solid var(--success-color);
   ;
   /* background-color: rgb(240, 248, 255); */
 }
+
+.circle-three{
+  background-color: #b363e4;
+  /* box-shadow: -10px -9px 3px -2px rgba(0,0,0,0.75) inset;
+-webkit-box-shadow: -10px -9px 3px -2px rgba(0,0,0,0.75) inset;
+-moz-box-shadow: -10px -9px 3px -2px rgba(0,0,0,0.75) inset; */
+}
+
+/* .circle-three.active{
+  background-color: #b363e4;
+} */
 
 .circle.active .contact {
   grid-area: ctc;
@@ -473,9 +607,7 @@ border : 2px solid var(--success-color);
   animation: fade-in 1s linear 0s forwards;
   display: block;
   margin: auto;
- 
-
-}
+ }
 
 #maps{
   display: none;
@@ -484,14 +616,14 @@ border : 2px solid var(--success-color);
 .circle.active #maps {
   grid-area: mps;
   height: 150%;
-  width: 150%;
+  width: 130%;
   border-radius: 1.5em;
   font-size:30px;
   display: flex;
   animation: fade-in 1s linear 0s forwards;
 }
 
-/* build circle API meteo */
+/* build circle four API meteo */
 
 .text-center{
   display:none;
@@ -524,13 +656,19 @@ border : 2px solid var(--success-color);
    margin-left: 1.6em;
 } */
 
+/* .circle-four{
+  box-shadow: -8px 9px 3px -2px rgba(0,0,0,0.75) inset;
+-webkit-box-shadow: -8px 9px 3px -2px rgba(0,0,0,0.75) inset;
+-moz-box-shadow: -8px 9px 3px -2px rgba(0,0,0,0.75) inset;
+} */
+
 .circle-four.active {
 
   height: 30vh;
   width: 20vw;
   z-index: -1;
-  background-color: rgb(14, 53, 226);
-
+  background: rgb(255,249,249);
+  background: linear-gradient(31deg, rgba(255,249,249,1) 47%, rgba(179,99,228,1) 46%);
 }
 
 .circle-four.active .text-center {
@@ -549,6 +687,7 @@ border : 2px solid var(--success-color);
 .circle-four.active #changer {
   display: block;
   margin-top:0.5em;
+
 }
 
 

@@ -57,22 +57,22 @@
 // creation fond d'ecran couleur random
 
 
-function generateRandomColor() {
-  var r = Math.floor(Math.random() * 256);
-  var g = Math.floor(Math.random() * 256);
-  var b = Math.floor(Math.random() * 256);
-  return "rgb(" + r + "," + g + "," + b + ")";
-}
+// function generateRandomColor() {
+//   var r = Math.floor(Math.random() * 256);
+//   var g = Math.floor(Math.random() * 256);
+//   var b = Math.floor(Math.random() * 256);
+//   return "rgb(" + r + "," + g + "," + b + ")";
+// }
 
-function updateGradientColor() {
-  var bodyElement = document.getElementById("myBody");
-  var gradientColor = generateRandomColor();
-  bodyElement.style.setProperty("--gradient-color", gradientColor);
-}
+// function updateGradientColor() {
+//   var bodyElement = document.getElementById("myBody");
+//   var gradientColor = generateRandomColor();
+//   bodyElement.style.setProperty("--gradient-color", gradientColor);
+// }
 
 
-setInterval(updateGradientColor, 3000);
-// Mettre à jour la couleur toutes les 3 secondes (3000 millisecondes)
+// setInterval(updateGradientColor, 3000);
+// // Mettre à jour la couleur toutes les 3 secondes (3000 millisecondes)
 
 const circles = document.querySelectorAll('.circle-one, .circle-two, .circle-three, .circle-four, .circle-center');
 
@@ -101,14 +101,14 @@ circles.forEach(circle => {
 
   circle.addEventListener('mouseover', () => {
     if (!circle.classList.contains('active')) {
-      circle.style.transition = 'all 0.3s ease';
+      circle.style.transition = 'all 0.5s ease';
       circles.forEach(circle => circle.style.animationPlayState = 'paused');
     }
   });
 
   circle.addEventListener('mouseout', () => {
     if (!circle.classList.contains('active')) {
-      circle.style.transition = 'all 0.3s ease';
+      circle.style.transition = 'all 0.5s ease';
       circles.forEach(circle => circle.style.animationPlayState = 'running');
     }
   });
