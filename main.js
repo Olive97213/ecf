@@ -1,80 +1,7 @@
 
-// const circles = document.querySelectorAll('.circle-one, .circle-two, .circle-three, .circle-four, .circle-center');
-
-
-
-// circles.forEach(circle => {
-//   circle.addEventListener('click', () => {
-//     circle.classList.toggle('active');
-//   });
-// });
-
-// circles.forEach(circle => {
-//   circle.addEventListener('mouseover', () => {
-//     if (!circle.classList.contains('active')) {
-//       circle.style.transition = 'all 0.2s ease';
-//       circles.forEach(circle => circle.style.animationPlayState = 'paused');
-//     }
-//   });
-
-//   circle.addEventListener('mouseout', () => {
-//     if (!circle.classList.contains('active')) {
-//       circle.style.transition = 'all 0.2s ease';
-//       circles.forEach(circle => circle.style.animationPlayState = 'running');
-//     }
-//   });
-// });
-
-// const circles = document.querySelectorAll('.circle-one, .circle-two, .circle-three, .circle-four, .circle-center');
-
-// circles.forEach(circle => {
-//   circle.addEventListener('click', () => {
-//     circle.classList.toggle('active');
-//     const aboutText = circle.querySelector('.description');
-//     if (circle.classList.contains('active')) {
-//       aboutText.style.display = 'block';
-//     } else {
-//       aboutText.style.display = 'none';
-//     }
-//   });
-
-//   circle.addEventListener('mouseover', () => {
-//     if (!circle.classList.contains('active')) {
-//       circle.style.transition = 'all 0.3s ease';
-//       circles.forEach(circle => circle.style.animationPlayState = 'paused');
-//     }
-//   });
-
-//   circle.addEventListener('mouseout', () => {
-//     if (!circle.classList.contains('active')) {
-//       circle.style.transition = 'all 0.3s ease';
-//       circles.forEach(circle => circle.style.animationPlayState = 'running');
-//     }
-//   });
-// });
-
-
-// creation fond d'ecran couleur random
-
-
-// function generateRandomColor() {
-//   var r = Math.floor(Math.random() * 256);
-//   var g = Math.floor(Math.random() * 256);
-//   var b = Math.floor(Math.random() * 256);
-//   return "rgb(" + r + "," + g + "," + b + ")";
-// }
-
-// function updateGradientColor() {
-//   var bodyElement = document.getElementById("myBody");
-//   var gradientColor = generateRandomColor();
-//   bodyElement.style.setProperty("--gradient-color", gradientColor);
-// }
-
-
-// setInterval(updateGradientColor, 3000);
-// // Mettre à jour la couleur toutes les 3 secondes (3000 millisecondes)
-
 const circles = document.querySelectorAll('.circle-one, .circle-two, .circle-three, .circle-four, .circle-center');
+
+// build animation circles
 
 circles.forEach(circle => {
   circle.addEventListener('click', () => {
@@ -88,17 +15,9 @@ circles.forEach(circle => {
       aboutText.style.display = 'none';
     }
 
-  //   const maPhoto = circle.querySelector(".maphoto");
-  //   if (circle.classList.contains('active')) {
-  //     setTimeout(() => {
-  //       maPhoto.style.display = 'block';
-  //     }, 1000);
-  //   } else {
-  //     maPhoto.style.display = 'none';
-  //   }
-
-  // });
-   const maPhoto = circle.querySelector(".maphoto");
+  // build animation photo and change photo responsive
+  
+    const maPhoto = circle.querySelector(".maphoto");
     if (circle.classList.contains('active')) {
       setTimeout(() => {
         if (window.innerWidth >= 780) {
@@ -113,6 +32,7 @@ circles.forEach(circle => {
 
   });
 
+//  build animation hover
 
   circle.addEventListener('mouseover', () => {
     if (!circle.classList.contains('active')) {
@@ -131,9 +51,11 @@ circles.forEach(circle => {
 
 const projects = document.querySelectorAll('.project-one, .project-two, .project-three, .project-four, .contact, #changer');
 
+// build select project when circle project open
+
 projects.forEach(project => {
   project.addEventListener('click', () => {
-    const circle = project.parentElement.parentElement; // Accéder à l'élément cercle parent
+    const circle = project.parentElement.parentElement;
     if (circle.classList.contains('active')) {
       circle.classList.remove('active');
 
@@ -141,10 +63,11 @@ projects.forEach(project => {
   });
 });
 
+// build validation formulaire
 
-const nameEl = document.querySelector("#name");
-const firstnameEl = document.querySelector("#firstname");
-const emailEl = document.querySelector("#email");
+const name1 = document.querySelector("#name");
+const firstname1 = document.querySelector("#firstname");
+const email1 = document.querySelector("#email");
 const form = document.querySelector(".contact");
 const submit = document.querySelector("#submit");
 const textArea = document.querySelector("#bio");
@@ -152,12 +75,12 @@ const textArea = document.querySelector("#bio");
 const checkName = () => {
   let valid = false;
 
-  const name = nameEl.value.trim();
+  const name = name1.value.trim();
 
   if (!isRequired(name)) {
-    showError(nameEl, "Le nom ne peut pas être vide");
+    showError(name1, "Le nom ne peut pas être vide");
   } else {
-    showSuccess(nameEl);
+    showSuccess(name1);
     valid = true;
   }
   return valid;
@@ -166,12 +89,12 @@ const checkName = () => {
 const checkFirstname = () => {
   let valid = false;
 
-  const firstname = firstnameEl.value.trim();
+  const firstname = firstname1.value.trim();
 
   if (!isRequired(firstname)) {
-    showError(firstnameEl, "Le Prénom ne peut pas être vide");
+    showError(firstname1, "Le Prénom ne peut pas être vide");
   } else {
-    showSuccess(firstnameEl);
+    showSuccess(firstname1);
     valid = true;
   }
   return valid;
@@ -179,13 +102,13 @@ const checkFirstname = () => {
 
 const checkEmail = () => {
   let valid = false;
-  const email = emailEl.value.trim();
+  const email = email1.value.trim();
   if (!isRequired(email)) {
-    showError(emailEl, "l'email ne peut être vide");
+    showError(email1, "l'email ne peut être vide");
   } else if (!isEmailValid(email)) {
-    showError(emailEl, "Email non valide");
+    showError(email1, "Email non valide");
   } else {
-    showSuccess(emailEl);
+    showSuccess(email1);
     valid = true;
   }
   return valid;
@@ -217,6 +140,8 @@ const showSuccess = (input) => {
   error.textContent = "";
 };
 
+// build send message
+
 form.addEventListener("submit", function (e) {
   e.preventDefault();
 
@@ -229,30 +154,18 @@ form.addEventListener("submit", function (e) {
     isFirstnameValid &&
     isEmailValid;
 
+  
   let ebody = `
-    <h3>First Name: </h3>${firstnameEl.value}
+    <h3>First Name: </h3>${firstname1.value}
     <br>
-    <h3>Last Name: </h3>${nameEl.value}
+    <h3>Last Name: </h3>${name1.value}
     <br>
-    <h3>Email: </h3>${emailEl.value}
+    <h3>Email: </h3>${email1.value}
     <br>
     <h3>Message: </h3>${textArea.value}
   `;
 
-  // let ebody=
-
-  // <b>Nom: </b>${nameEl.value}&nbsp;$(firstnameEl.value)
-  // <br>
-  // <b>Email: </b>${emailEl.value}
-  // <br> 
-  // <b>Message: </b>${textArea.value}
-  // <br>
-
-
-
-
-
-
+  
   if (isFormValid) {
     Email.send({
       Host: "smtp.elasticemail.com",
@@ -297,10 +210,10 @@ form.addEventListener(
   })
 );
 
-// API meteo
+// build API meteo
 let ville = 'Marseille';
-// Afficher à l'entrée de la page une température d'une ville par défaut, ici Marseille
-// Pour ca on appelle la fonction recevoirTemperature();
+
+
 recevoirTemperature(ville);
 function recevoirTemperature(ville) {
     let appid = '5dd4a3cfb9e347e4e1b4e7fd61fe21dd';
