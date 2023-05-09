@@ -210,12 +210,6 @@ background: linear-gradient(31deg, rgba(255,249,249,1) 50%, rgba(179,99,228,1) 5
   /* background-color: rgb(240, 248, 255); */
 }
 
-
-.description {
-  display: none;
-
-}
-
 .circle.active .description {
   grid-area: abt;
   font-size: xx-large;
@@ -223,15 +217,19 @@ background: linear-gradient(31deg, rgba(255,249,249,1) 50%, rgba(179,99,228,1) 5
   animation: fade-in 1s linear 0s forwards;
 }
 
-.maphoto {
-  display: none;
-}
+
+
 
 .circle.active .maphoto {
   grid-area: moi;
   width: 200%;
   animation: fade-in-two 1s linear 0s forwards;
 }
+
+.circle.active .maphoto-responsive{
+  display: none;
+}
+
 
 
 @keyframes fade-in {
@@ -990,23 +988,24 @@ a {
 
   /* responsive about */
 
-  .circle.active .container-grid-one {
-    display: grid;
-    height: 40%;
-    width: 40%;
-    margin-top: 16em;
-    margin-left: 10em;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-      ". . . . "
-      "abt abt abt moi "
-      "abt abt abt moi  "
-      ". . . moi "
-      ". . . moi "
-    ;
-    /* background-color: rgb(240, 248, 255); */
-  }
+    .circle.active .container-grid-one {
+      display: grid;
+      height: 40%;
+      width: 40%;
+      margin-top: 30em;
+      margin-left: 10em;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-areas:
+        ". me me . "
+        ". me me . "
+        ". . . . "
+        "abt abt abt abt "
+        ". . . . "
+      ;
+    
+      /* background-color: rgb(240, 248, 255); */
+    }
 
   .circle.active .description {
     grid-area: abt;
@@ -1016,13 +1015,14 @@ a {
 
   }
 
-
-  .circle.active .maphoto {
-    grid-area: moi;
-    width: 250%;
-
+ .circle.active .maphoto-responsive{
+    display: block;
+    width: 100%;
     animation: fade-in-two 1s linear 0s forwards;
+    grid-area: me;
   }
+
+
 
   /* responsive skill */
 
@@ -1179,7 +1179,7 @@ a {
   
   #ville {
   
-    font-size: 100%;
+    font-size: 90%;
   }
   
   #changer {
@@ -1221,7 +1221,7 @@ a {
     text-align: center;
     display: block;
     position: relative;
-    top: 1em;
+    top: 1.7em;
     font-size:small;
   }
   
@@ -1277,3 +1277,299 @@ a {
   }
 
 }
+
+  @media screen and (max-width: 428px) {
+    
+    /* responsive circle*/
+
+    .circle {
+      display: flex;
+      position: absolute;
+      width: 120%;
+      height: 65%;
+      
+    }
+
+    .circle:hover {
+      width: 120%;
+      height: 65%;
+    }
+
+    .title-responsive .fa-solid {
+      
+      font-size: 25px;
+  
+    }
+    
+    .circle.active {
+
+      height: 190vh;
+      width: 190vw;
+      z-index: -1;
+      background-color: #fff9f9;
+      background: rgb(179, 99, 228);
+      background: linear-gradient(211deg, rgba(179, 99, 228, 1) 50%, rgba(255, 249, 249, 1) 50%);
+      box-shadow: 1px -2px 9px 5px rgba(0, 0, 0, 0.95) inset;
+      -webkit-box-shadow: 1px -2px 9px 5px rgba(0, 0, 0, 0.95) inset;
+      -moz-box-shadow: 1px -2px 9px 5px rgba(0, 0, 0, 0.95) inset;
+  
+  
+    }
+
+    /* responsive about */
+
+    .circle.active .container-grid-one {
+      display: grid;
+      height: 30%;
+      width: 40%;
+      margin-top: 25em;
+      margin-left: 8em;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-areas:
+        ". me me . "
+        ". me me . "
+        ". . . . "
+        "abt abt abt abt "
+        ". . . . "
+      ;
+     
+      /* background-color: rgb(240, 248, 255); */
+    }
+    
+    
+    
+    .circle.active .description {
+      grid-area: abt;
+      font-size: large;
+      text-align: center;
+      animation: fade-in 1s linear 0s forwards;
+  
+    }
+  
+   .circle.active .maphoto-responsive{
+      display: block;
+      width: 100%;
+      animation: fade-in-two 1s linear 0s forwards;
+      grid-area: me;
+    }
+
+    
+
+    /* responsive skill */
+
+    .circle.active .container-grid-two {
+    display: grid;
+    height: 60%;
+    width: 90%;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      ". . . . . . . ."
+      ". . . . . . . ."
+      ". . . . . . . ."
+      ". . . . . . . ."
+      ". . sk1 sk2 sk3 . . ."
+      ". . . . . . . ."
+      ". . sk4 sk5 sk6 . . ."
+      ". . . . . . . ."
+      ". . sk7 sk8 sk9 . . ."
+      ". . . . . . . ."
+      ". . . . . . . ."
+    ;
+    /* background-color: rgb(240, 248, 255); */
+  }
+
+  .competences {
+    display: none;
+    font-size: 5em;
+  }
+
+  .logo-php {
+    height: 120%;
+    width: 60%;
+  }
+
+  .logo-figma {
+    height: 100%;
+    width: 100%;
+  }
+
+  .logo-bootstrap {
+    height: 70%;
+    width: 50%;
+  }
+
+  .logo-sql {
+    height: 90%;
+    width: 50%;
+  }
+
+  /* responsive API */
+
+  .circle-four{
+    height: 25vh;
+    width: 35vw;
+    z-index: 15;
+    background: rgb(255, 249, 249);
+  }
+
+  /* responsive project */
+
+  .circle.active .container-grid-three {
+    display: grid;
+    height: 70%;
+    width: 80%;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      ". . . . . . . . "
+      ". . . . . . . . "
+      ". pj1 pj1 pj1 . . . . "
+      ". pj2 pj2 pj2 . . . . "
+      ". pj3 pj3 pj3 . . . . "
+      ". pj4 pj4 pj4 . . . . "
+      ". . . . . . . . "
+    ;
+    margin-bottom: 25em;
+    margin-left: 7em;
+    /* background-color: rgb(240, 248, 255); */
+  }
+
+  .project {
+    height: 77%;
+    width: 90%;
+  }
+
+  /* responsive skill*/
+
+  .circle.active .container-grid-two {
+    display: grid;
+    height: 50%;
+    width: 100%;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      ". . . . . . . ."
+      ". . . . . . . ."
+      ". . . . . . . ."
+      ". . . . . . . ."
+      ". . sk1 sk2 sk3 . . ."
+      ". . . . . . . ."
+      ". . sk4 sk5 sk6 . . ."
+      ". . . . . . . ."
+      ". . sk7 sk8 sk9 . . ."
+      ". . . . . . . ."
+      ". . . . . . . ."
+    ;
+    margin-top: 10em;
+    margin-right: 2em;
+    /* background-color: rgb(240, 248, 255); */
+  }
+
+  .competences {
+    display: none;
+    font-size: 4em;
+  }
+
+  .logo-php {
+    height: 120%;
+    width: 60%;
+  }
+
+  .logo-figma {
+    height: 100%;
+    width: 100%;
+  }
+
+  .logo-bootstrap {
+    height: 70%;
+    width: 70%;
+  }
+
+  .logo-sql {
+    height: 80%;
+    width: 70%;
+  }
+
+  .form-field {
+
+    margin-left: 5%;
+    margin-bottom: 2%;
+  
+  }
+
+  /* responsive contact */
+  
+  
+  .form-field input {
+    border: solid 2px #f0f0f0;
+    padding: 1.5%;
+    font-size: 30%;
+    display: block;
+    width: 80%;
+    border-radius: 1.5em;
+  }
+  
+  .form-field textarea {
+    border-radius: 1.5em;
+    width: 80%;
+  }
+  
+  .form-field .button {
+    border-radius: 1.5em;
+    padding: 0.8em;
+    width: 30%;
+    margin-left: 33%;
+  }
+  
+.circle.active .container-grid-four {
+    display: grid;
+    height: 80%;
+    width: 80%;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      ". . . . . . . . "
+      ". . . . . . . . "
+      ". . . ctc ctc . . . "
+      ". . . ctc ctc . . . "
+      ". . . mps mps . . . "
+      ". . . mps mps . . . "
+      ". . . . . . . . "
+    ;
+    margin-left: 9em; 
+    margin-bottom: 15em;
+  }
+  
+  .circle.active .contact {
+    grid-area: ctc;
+    height: 100%;
+    width: 160%;
+    font-size: 20px;
+    margin-left:-3em;
+    margin-top: 1em;
+   }
+  
+  .circle.active #maps {
+    grid-area: mps;
+    height: 60%;
+    width: 190%;
+    margin-left: -1em;
+    margin-bottom: 2em;
+  }
+
+ 
+}
+
+
+
+

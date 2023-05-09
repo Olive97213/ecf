@@ -88,16 +88,31 @@ circles.forEach(circle => {
       aboutText.style.display = 'none';
     }
 
-    const maPhoto = circle.querySelector(".maphoto");
+  //   const maPhoto = circle.querySelector(".maphoto");
+  //   if (circle.classList.contains('active')) {
+  //     setTimeout(() => {
+  //       maPhoto.style.display = 'block';
+  //     }, 1000);
+  //   } else {
+  //     maPhoto.style.display = 'none';
+  //   }
+
+  // });
+   const maPhoto = circle.querySelector(".maphoto");
     if (circle.classList.contains('active')) {
       setTimeout(() => {
-        maPhoto.style.display = 'block';
+        if (window.innerWidth >= 780) {
+          maPhoto.style.display = 'block';
+        } else {
+          maPhoto.style.display = 'none';
+        }
       }, 1000);
     } else {
       maPhoto.style.display = 'none';
     }
 
   });
+
 
   circle.addEventListener('mouseover', () => {
     if (!circle.classList.contains('active')) {
