@@ -144,6 +144,7 @@
     ". . . . "
 }
 
+
 .circle.active .description {
   grid-area: abt;
   font-size:xxx-large;
@@ -684,6 +685,43 @@ a {
 
 /* media query */
 
+@media screen and (max-width: 1440px){
+  #myBody {
+    background: rgb(179, 99, 228);
+    background: linear-gradient(216deg, rgb(169, 55, 222) 50%, rgba(255, 249, 249, 1) 50%);
+    }
+
+    .circle.active .container-grid-one {
+      display: grid;
+      height: 40%;
+      width: 40%;
+      margin-top: 16em;
+      margin-left: 10em;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      grid-template-areas:
+        ". . . . "
+        "abt abt moi . "
+        "abt abt . .  "
+        ". . . . "
+      ;
+      
+    }
+  
+    .circle.active .description {
+      font-size: xx-large;
+    }
+  
+  
+    .circle.active .maphoto {
+  
+      width: 250%;
+    }
+
+
+}
+
+
 @media screen and (max-width: 1300px) {
 
   /* responsive about */
@@ -702,7 +740,7 @@ a {
       "abt abt . .  "
       ". . . . "
     ;
-    /* background-color: rgb(240, 248, 255); */
+   
   }
 
   .circle.active .description {
@@ -865,9 +903,12 @@ a {
       "abt abt abt abt "
       ". . . . "
     ;
+}
 
-   
-  }
+ .circle.active .maphoto {
+  display: none;
+ }
+
 
   .circle.active .description {
     grid-area: abt;
@@ -883,8 +924,6 @@ a {
     animation: fade-in-two 1s linear 0s forwards;
     grid-area: me;
   }
-
-
 
   /* responsive skill */
 
@@ -1121,6 +1160,7 @@ a {
 
 @media screen and (max-width: 428px) {
 
+  
   /* responsive circle*/
 
   .circle {
@@ -1174,8 +1214,9 @@ a {
       "abt abt abt abt "
       ". . . . "
     ;
-    
 }
+
+
 
   .circle.active .description {
     grid-area: abt;

@@ -32,7 +32,7 @@ Le footer est composé de différents icônes avec des liens.
 
 Pour créer ce portfolio j'ai utilisé le HTML/CSS et JavaScript.
 
-Ce dernier m'a été utile pour créer certaines animations, les toggle, intégrer l'API, la vérification du formulaire, le fait de pouvoir envoyer un message vers ma boite mail avec celui-ci et le fait de pouvoir cliquer sur les différents projets et saisir le formulaire sans que les sections ne se referment avec le clique.
+Ce dernier m'a été utile pour créer certaines animations, les toggle, intégrer l'API, la vérification du formulaire, pouvoir envoyer un message vers ma boite mail avec celui-ci et le fait de pouvoir cliquer sur les différents projets et saisir le formulaire sans que les sections ne se referment avec le clique.
 
 En conclusion j'espère que ce portfolio saura satisfaire vos attentes, j'y apporterai au fil du temps quelques modifications afin de l'améliorer.
 
