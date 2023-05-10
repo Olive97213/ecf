@@ -15,24 +15,29 @@ circles.forEach(circle => {
       aboutText.style.display = 'none';
     }
 
+
     // build animation photo and change photo responsive
 
-    const maPhoto = circle.querySelector(".maphoto");
-    if (circle.classList.contains('active')) {
-      setTimeout(() => {
-        if (window.innerWidth >= 780) {
-          maPhoto.style.display = 'block';
-        } else {
-          maPhoto.style.display = 'none';
-        }
-      }, 1000);
+    const maPhoto = circle.querySelector('.maphoto');
+
+    window.addEventListener('resize', function () {
+      if (circle.classList.contains('active') && window.innerWidth >= 780) {
+        maPhoto.style.display = 'block';
+      } else {
+        maPhoto.style.display = 'none';
+      }
+    });
+
+    if (circle.classList.contains('active') && window.innerWidth >= 780) {
+      maPhoto.style.display = 'block';
     } else {
       maPhoto.style.display = 'none';
     }
 
   });
 
-  //  build animation hover
+
+  //  build animation hover circle
 
   circle.addEventListener('mouseover', () => {
     if (!circle.classList.contains('active')) {

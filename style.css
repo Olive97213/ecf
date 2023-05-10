@@ -105,6 +105,10 @@
   height: 70%;
   width: 60%;
   cursor: pointer;
+  /* box-shadow: none; */
+  box-shadow: 0px 4px 5px 5px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 4px 5px 5px rgba(0, 0, 0, 0.75) inset;
+  -moz-box-shadow: 0px 4px 5px 5px rgba(0, 0, 0, 0.75) inset;
 }
 
 .circle:hover .title {
@@ -151,7 +155,7 @@
 
 .circle.active .description {
   grid-area: abt;
-  font-size:xx-large;
+  font-size: xx-large;
   text-align: center;
   animation: fade-in 1s linear 0s forwards;
 }
@@ -372,21 +376,21 @@ a {
   grid-area: pj2;
   animation: fade-in 1s linear 0s forwards;
   display: flex;
-  
+
 }
 
 .circle.active .project-three {
   grid-area: pj3;
   animation: fade-in 1s linear 0s forwards;
   display: flex;
-  
+
 }
 
 .circle.active .project-four {
   grid-area: pj4;
   animation: fade-in 1s linear 0s forwards;
   display: flex;
-  
+
 }
 
 /* build circle three contact  */
@@ -484,12 +488,12 @@ a {
     ". . . . . . . . "
     ". . . . . . . . "
   ;
- 
+
 }
 
 .circle-three {
   background-color: #b363e4;
-  
+
 }
 
 
@@ -567,9 +571,8 @@ a {
 }
 
 .circle-four.active #changer {
-  display: hidden;
+  display: block;
   margin-top: 0.5em;
-
 }
 
 
@@ -596,7 +599,7 @@ a {
 .reseaux {
 
   font-size: 50px;
-  
+
 }
 
 
@@ -689,42 +692,88 @@ a {
 
 /* media query */
 
-@media screen and (max-width: 1440px){
+@media screen and (max-width: 1440px) {
   #myBody {
     background: rgb(179, 99, 228);
     background: linear-gradient(216deg, rgb(169, 55, 222) 50%, rgba(255, 249, 249, 1) 50%);
-    }
+  }
 
-    .circle.active .container-grid-one {
-      display: grid;
-      height: 40%;
-      width: 40%;
-      margin-top: 16em;
-      margin-left: 10em;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr;
-      grid-template-areas:
-        ". . . . "
-        "abt abt moi . "
-        "abt abt . .  "
-        ". . . . "
-      ;
-      
-    }
-  
-    .circle.active .description {
-      font-size: xx-large;
-    }
-  
-  
-    .circle.active .maphoto {
-  
-      width: 250%;
-    }
+  .circle.active .container-grid-one {
+    display: grid;
+    height: 40%;
+    width: 40%;
+    margin-top: 16em;
+    margin-left: 10em;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      ". . . . "
+      "abt abt moi . "
+      "abt abt . .  "
+      ". . . . "
+    ;
 
+  }
+
+  .circle.active .description {
+    font-size: xx-large;
+  }
+
+
+  .circle.active .maphoto {
+
+    width: 250%;
+  }
+
+  .circle.active .container-grid-four {
+
+    height: 80%;
+    width: 80%;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      ". . . . . . . . "
+      ". . . ctc . mps mps . "
+      ". . . ctc . mps mps . "
+      ". . . . . . . . "
+      ". . . . . . . . "
+      ". . . . . . . . "
+      ". . . . . . . . "
+    ;
+
+  }
+
+  .circle.active .contact {
+    grid-area: ctc;
+    height: 125%;
+    width: 100%;
+    font-size: 20px;
+    margin-left: 4em;
+  }
+
+  .circle.active #maps {
+    grid-area: mps;
+    height: 70%;
+    width: 100%;
+    margin-left: 1.9em;
+  }
+
+  /* responsive API */
+
+  #changer {
+    display: block;
+  }
+
+  .circle-four.active {
+
+    height: 33vh;
+    width: 23vw;
+    z-index: -1;
+    background: rgb(255, 249, 249);
+
+  }
 
 }
-
 
 @media screen and (max-width: 1300px) {
 
@@ -744,7 +793,7 @@ a {
       "abt abt . .  "
       ". . . . "
     ;
-   
+
   }
 
   .circle.active .description {
@@ -760,7 +809,7 @@ a {
   /* responsive contact */
 
   .circle.active .container-grid-four {
-    
+
     height: 70%;
     width: 80%;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -774,7 +823,7 @@ a {
       ". . . . . . . . "
       ". . . . . . . . "
     ;
-    
+
   }
 
   .circle.active .contact {
@@ -808,7 +857,7 @@ a {
       "abt abt . .  "
       ". . . . "
     ;
-   
+
   }
 
   .circle.active .description {
@@ -829,7 +878,7 @@ a {
   .circle {
     width: 70%;
     height: 40%;
-    
+
 
   }
 
@@ -838,11 +887,9 @@ a {
     height: 80%;
   }
 
-  
+
 
 }
-
-
 
 @media screen and (max-width: 780px) {
 
@@ -927,11 +974,12 @@ a {
       "abt abt abt abt "
       ". . . . "
     ;
-}
+  }
 
- .circle.active .maphoto {
+  /* .circle.active .maphoto {
   display: none;
- }
+ } */
+
 
 
   .circle.active .description {
@@ -1018,7 +1066,7 @@ a {
 
     margin-top: 0;
     margin-left: 5em;
-    
+
   }
 
   .project {
@@ -1115,7 +1163,7 @@ a {
 
   }
 
- .circle-four {
+  .circle-four {
     height: 25vh;
     width: 35vw;
     z-index: 15;
@@ -1181,7 +1229,7 @@ a {
     margin-bottom: 0em;
   }
 
-  .circle-four{
+  .circle-four {
     pointer-events: none;
   }
 
@@ -1191,7 +1239,7 @@ a {
 
 @media screen and (max-width: 428px) {
 
-  
+
   /* responsive circle*/
 
   .circle {
@@ -1232,9 +1280,9 @@ a {
 
   .circle.active .container-grid-one {
     display: grid;
-    height: 30%;
+    height: 35%;
     width: 40%;
-    margin-top: 25em;
+    margin-top: 18em;
     margin-left: 8em;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
@@ -1245,7 +1293,7 @@ a {
       "abt abt abt abt "
       ". . . . "
     ;
-}
+  }
 
 
 
@@ -1287,7 +1335,7 @@ a {
       ". . . . . . . ."
       ". . . . . . . ."
     ;
-    
+
   }
 
   .competences {
@@ -1354,13 +1402,12 @@ a {
 
   } */
 
-  .circle-four:hover {
+  /* .circle-four:hover {
     height: 25vh;
     width: 50vw;
-
     background: white;
 
-  }
+  } */
 
   .circle-four.active {
     box-shadow: 0px 4px 5px 5px rgba(0, 0, 0, 0.75);
@@ -1406,7 +1453,7 @@ a {
     ;
     margin-bottom: 17em;
     margin-left: 7em;
-    
+
   }
 
   .project {
@@ -1439,7 +1486,7 @@ a {
     ;
     margin-top: 10em;
     margin-right: 2em;
-    
+
   }
 
   .competences {
