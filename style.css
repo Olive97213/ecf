@@ -19,7 +19,7 @@
   flex-direction: column;
   align-items: center;
   background: rgb(179, 99, 228);
-  background: linear-gradient(211deg, rgb(169, 55, 222) 50%, rgba(255, 249, 249, 1) 50%);
+  background: linear-gradient(213deg, rgb(169, 55, 222) 50%, rgba(255, 249, 249, 1) 50%);
   overflow: hidden;
 
 }
@@ -49,6 +49,7 @@
 .circle-one {
 
   grid-area: c1;
+  background-color: #fff9f9;
 }
 
 .circle-two {
@@ -58,15 +59,18 @@
 
 .circle-three {
   grid-area: c3;
+  background-color: #fff9f9;
 }
 
 .circle-four {
   grid-area: c4;
+  background-color: #fff9f9;
 }
 
 
 .circle-center {
   grid-area: cc;
+  background-color: #fff9f9;
 }
 
 .circle {
@@ -147,7 +151,7 @@
 
 .circle.active .description {
   grid-area: abt;
-  font-size:xxx-large;
+  font-size:xx-large;
   text-align: center;
   animation: fade-in 1s linear 0s forwards;
 }
@@ -317,7 +321,7 @@
 .project {
   display: none;
   background: rgba(232, 141, 29, 0.523);
-  height: 90%;
+  height: 80%;
   width: 70%;
   border-radius: 1em;
 
@@ -331,7 +335,7 @@ a {
 
 .circle.active .container-grid-three {
   display: grid;
-  height: 70%;
+  height: 50%;
   width: 80%;
   justify-items: center;
   align-items: center;
@@ -346,7 +350,7 @@ a {
     ". pj3 pj3 pj4 pj4 . . . "
     ". . . . . . . . "
   ;
-  margin-top: 10em;
+  margin-top: 23em;
 }
 
 .circle.active .project-one {
@@ -426,7 +430,7 @@ a {
 
 .contact {
   display: none;
-  background: #ec7e3da8;
+  background: #dfdedc9d;
   border-radius: 1.5em;
 
 }
@@ -563,7 +567,7 @@ a {
 }
 
 .circle-four.active #changer {
-  display: block;
+  display: hidden;
   margin-top: 0.5em;
 
 }
@@ -818,6 +822,26 @@ a {
 
 }
 
+/* responsive ipad */
+
+@media screen and (max-width: 810px) {
+
+  .circle {
+    width: 70%;
+    height: 40%;
+    
+
+  }
+
+  .circle-four.active {
+    width: 150%;
+    height: 80%;
+  }
+
+  
+
+}
+
 
 
 @media screen and (max-width: 780px) {
@@ -978,7 +1002,7 @@ a {
 
   .circle.active .container-grid-three {
     display: grid;
-    height: 70%;
+    height: 50%;
     width: 80%;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -991,13 +1015,14 @@ a {
       ". . . . . . . . "
       ". . . . . . . . "
     ;
-    margin-bottom: 15em;
+
+    margin-top: 0;
     margin-left: 5em;
     
   }
 
   .project {
-    height: 110%;
+    height: 100%;
     width: 90%;
   }
 
@@ -1116,9 +1141,9 @@ a {
 
   }
 
-  .circle-four #changer {
+  /* .circle-four #changer {
     display: block;
-  }
+  } */
 
   .circle-four:hover {
     height: 25vh;
@@ -1156,7 +1181,13 @@ a {
     margin-bottom: 0em;
   }
 
+  .circle-four{
+    pointer-events: none;
+  }
+
 }
+
+/* responsive iphone 12promax */
 
 @media screen and (max-width: 428px) {
 
@@ -1316,12 +1347,12 @@ a {
 
   }
 
-  .circle-four #changer {
+  /* .circle-four #changer {
     display: block;
     position: relative;
     bottom: 1.5em;
 
-  }
+  } */
 
   .circle-four:hover {
     height: 25vh;
@@ -1373,7 +1404,7 @@ a {
       ". pj4 pj4 pj4 . . . . "
       ". . . . . . . . "
     ;
-    margin-bottom: 25em;
+    margin-bottom: 17em;
     margin-left: 7em;
     
   }
