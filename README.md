@@ -7,7 +7,7 @@ Récupération du projet :
 
 Faites un git clone avec cette adresse via un terminal : https://github.com/Olive97213/ecf.git
 
-Ou cliquer directement sur cet url pour y avoir accès via Github page:
+Ou cliquer directement sur cet url pour y avoir accès via Git page: https://olive97213.github.io/ecf/
 
 Pour la première option il ne vous restera plus qu’à ouvrir le dossier avec un éditeur de code.
 
