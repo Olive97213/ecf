@@ -36,5 +36,7 @@ Ce dernier m'a été utile pour créer certaines animations, les toggle, intégr
 
 En conclusion j'espère que ce portfolio saura satisfaire vos attentes, j'y apporterai au fil du temps quelques modifications afin de l'améliorer.
 
+Merci.
+
 
 
